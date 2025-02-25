@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
@@ -21,30 +21,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Install Node.js
+      # Install Node.js and enable caching for pnpm
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "pnpm"
 
-      # Install pnpm manually
+      # Install pnpm manually to avoid corepack issues
       - name: Install pnpm
         run: |
           npm install -g pnpm
+          echo "$(npm root -g)/pnpm" >> $GITHUB_PATH
           pnpm --version
 
-      # Install dependencies
+      # Install dependencies using pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Setup GitHub Pages
+      # Setup GitHub Pages configuration
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
 
-      # Restore cache
+      # Restore build cache to speed up builds
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -53,15 +54,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
-      # Build the Next.js project
+      # Build Next.js project
       - name: Build with Next.js
         run: pnpm next build
 
-      # Export Next.js static site
+      # Export the Next.js site for static hosting
       - name: Export Next.js static site
         run: pnpm next export
 
-      # Upload artifact
+      # Upload the built site as an artifact for deployment
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
