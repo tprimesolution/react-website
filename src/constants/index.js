@@ -20,6 +20,13 @@ import {
   mathwork,
   CompileVortex,
   eduskill,
+  aws,
+  azure,
+  docker,
+  gcp,
+  helm,
+  kafka,
+  postgresql
 } from "../assets";
 
 export const navLinks = [
@@ -133,9 +140,7 @@ export const experiences = [
     iconBg: "#161329",
     // date: "June 2023 - July 2023",
     points: [
-      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
-      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
-      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
+      "We design user-friendly, highly usable software with responsive interface to bring about great experience.",
     ],
   },
 ];

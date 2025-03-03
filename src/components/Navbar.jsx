@@ -42,7 +42,7 @@ const Navbar = () => {
           isSecondary ? 'secondary' : 'white'
         } hover:text-white text-[20px] font-medium cursor-pointer`}
       >
-        <button onClick={toggleResume}>Resume</button>
+        {/* <button onClick={toggleResume}>Resume</button> */}
       </li>
     </ul>
   );
@@ -63,8 +63,8 @@ const Navbar = () => {
           >
             <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
             <p className="text-white text-[20px] font-bold cursor-pointer flex">
-              LOHIT&nbsp;
-              <span className="sm:block hidden">KOLLURI</span>
+              TechnoPrime&nbsp;
+              <span className="sm:block hidden">Solution</span>
             </p>
           </Link>
           {renderNavLinks(false)}

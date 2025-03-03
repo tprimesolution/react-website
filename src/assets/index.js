@@ -8,6 +8,14 @@ import python from "./tech-stack/python.png";
 import c from "./tech-stack/c.png";
 import cpp from "./tech-stack/cpp.png";
 import java from "./tech-stack/java.png";
+import aws from "./tech-stack/aws.svg";
+import gcp from "./tech-stack/google-cloud.svg";
+import docker from "./tech-stack/docker.webp";
+import helm from "./tech-stack/helm-color.svg";
+import jenkins from "./tech-stack/jenkins-original.svg";
+import kafka from "./tech-stack/kafka.svg";
+import postgresql from "./tech-stack/database-postgres.svg";
+
 
 // Import project images
 import weatherpedia from "./projects/WeatherPedia.png";
@@ -59,4 +67,11 @@ export {
   menu,
   close,
   eduskill,
+  aws,
+  azure,
+  docker,
+  gcp,
+  helm,
+  kafka,
+  postgresql
 };
