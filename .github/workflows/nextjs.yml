@@ -1,4 +1,4 @@
-name: Deploy Next.js site to GitHub Pages
+name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
@@ -21,52 +21,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Install Node.js and enable caching for pnpm
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "pnpm"
 
-      # Install pnpm manually to avoid corepack issues
-      - name: Install pnpm
-        run: |
-          npm install -g pnpm
-          echo "$(npm root -g)/pnpm" >> $GITHUB_PATH
-          pnpm --version
+      - name: Enable Corepack and Install pnpm
+        run: corepack enable && corepack prepare pnpm@latest --activate
 
-      # Install dependencies using pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Setup GitHub Pages configuration
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
+      - name: Build Vite app
+        run: pnpm run build
 
-      # Restore build cache to speed up builds
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
-
-      # Build Next.js project
-      - name: Build with Next.js
-        run: pnpm next build
-
-      # Export the Next.js site for static hosting
-      - name: Export Next.js static site
-        run: pnpm next export
-
-      # Upload the built site as an artifact for deployment
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: dist  # Vite outputs to `dist` by default
 
   deploy:
     environment:
