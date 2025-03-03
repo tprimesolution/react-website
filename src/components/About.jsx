@@ -32,19 +32,15 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <p className={styles.sectionSubText}>About TechnoPrime</p>
+        <h2 className={styles.sectionHeadText}>The Best IT Solution With 10 Years of Experience</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a Computer Science student at SRM University and multilingual speaker with a passion
-        for ethical hacking, artificial intelligence, and neural language processing. I am looking
-        to join a company that values innovation, collaboration, and continuous learning and am
-        confident that my enthusiasm and drive will help me succeed in any role that leverages my
-        passion for technology.
+        TechnoPrime is expertise in all technological and IT-related services such as product engineering, warranty management, building cloud, infrastructure, network, and so forth. We pick activity over contemplations and words – without fail and our vision is to continually develop as an expert IT Solutions organization.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

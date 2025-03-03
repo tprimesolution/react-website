@@ -57,34 +57,81 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "AI/ML Intern",
-    company_name: "EduSkill Foundation | AWS Academy | AICTE",
+    title: "Cyber Security",
+    // company_name: "EduSkill Foundation | AWS Academy | AICTE",
     icon: eduskill,
     iconBg: "#161329",
-    date: "Sep 2023 - Nov 2023",
+    // date: "Sep 2023 - Nov 2023",
     points: [
-      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
-      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
+      "We provide the strength and security of firewalls to protect online data from malicious sources.",
     ],
   },
   {
-    title: "Mathwork Ai Virtual Intern",
-    company_name: "Mathwork | AICTE",
+    title: "Data Analytics & solution",
+    // company_name: "EduSkill Foundation | AWS Academy | AICTE",
+    icon: eduskill,
+    iconBg: "#161329",
+    // date: "Sep 2023 - Nov 2023",
+    points: [
+      "We analyze the data to better understand your business, increase and accelerate the business value.",
+    ],
+  },
+  {
+    title: "DevSecOps & Automation",
+    // company_name: "EduSkill Foundation | AWS Academy | AICTE",
+    icon: eduskill,
+    iconBg: "#161329",
+    // date: "Sep 2023 - Nov 2023",
+    points: [
+      "Our DevSecOps Transformation & Automation service modernizes your software delivery pipeline. Through automation and security integration, your teams gain agility, consistency, and control. Deliver secure, high-quality software faster and with lower risk.",
+    ],
+  },
+  {
+    title: "Cloud Solution",
+    // company_name: "Mathwork | AICTE",
     icon: mathwork,
     iconBg: "#161329",
-    date: "May 2023 - Sep 2023",
+    // date: "May 2023 - Sep 2023",
     points: [
-      "Completed virtual internship, gaining a strong foundation in MATLAB, including data analysis and processing.",
-      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
-      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
+      "We provide professional and cost-effective Cloud solutions on different Cloud Platforms to help enterprises grow, and develop, host, manage and scale their applications on Cloud.",
     ],
   },
   {
-    title: "Artificial Intelligence Intern",
-    company_name: "Edunet Foundation | IBM SkillsBuild | AICTE",
+    title: "SEO Optimization",
+    // company_name: "Mathwork | AICTE",
+    icon: mathwork,
+    iconBg: "#161329",
+    // date: "May 2023 - Sep 2023",
+    points: [
+      "we offer comprehensive SEO optimization services Boost your website’s visibility, drive organic traffic, and rank higher with our expert SEO optimization services.",
+    ],
+  },
+  {
+    title: "Artificial Intelligence",
+    // company_name: "Mathwork | AICTE",
+    icon: mathwork,
+    iconBg: "#161329",
+    // date: "May 2023 - Sep 2023",
+    points: [
+      "We excel in designing, developing, and integrating customized solutions by combining the power of cloud and AI/ML.Discover now",
+    ],
+  },
+  {
+    title: "IT Consulting Service",
+    // company_name: "Mathwork | AICTE",
+    icon: mathwork,
+    iconBg: "#161329",
+    // date: "May 2023 - Sep 2023",
+    points: [
+      "We propose feasible and practical plans for successfully transform businesses based on their needs.",
+    ],
+  },
+  {
+    title: "Apps Development",
+    // company_name: "Edunet Foundation | IBM SkillsBuild | AICTE",
     icon: edunet,
     iconBg: "#161329",
-    date: "June 2023 - July 2023",
+    // date: "June 2023 - July 2023",
     points: [
       "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
       "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
